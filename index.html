@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My website</title>
+</head>
+<body>
+    <h1>This is my website</h1>
+</body>
+<!-- without delay -->
+<script>
+    // Get the current URL parameters
+    const urlParams = new URLSearchParams(window.location.search);
+    
+    // Get the 'site' parameter from the URL
+    const siteParam = urlParams.get('site');
+  
+    // Conditionally redirect based on the 'site' parameter value
+    if (siteParam === 'example1') {
+      window.location.href = "https://www.youtube.com";
+    } else if (siteParam === 'example2') {
+      window.location.href = "https://www.example2.com";
+    } else {
+      // Default redirection if no 'site' parameter or unknown value
+      console.log("No redirection, staying on the current site.");
+    }
+  </script>
+  <!-- <script>
+    // Get the current URL parameters
+    const urlParams = new URLSearchParams(window.location.search);
+  
+    // Get the 'site' parameter from the URL
+    const siteParam = urlParams.get('site');
+  
+    // Set a delay time in milliseconds (e.g., 3000ms = 3 seconds)
+    const redirectDelay = 3000; // 3 seconds
+  
+    // Function to handle the redirection after the delay
+    function redirectTo(url) {
+      setTimeout(function() {
+        window.location.href = url;
+      }, redirectDelay);
+    }
+  
+    // Conditionally redirect based on the 'site' parameter value
+    if (siteParam === 'youtube') {
+      redirectTo("https://www.youtube.com");
+    } else if (siteParam === 'example2') {
+      redirectTo("https://www.example2.com");
+    } else {
+      // Default redirection if no 'site' parameter or unknown value
+      console.log("No redirection, staying on the current site.");
+    }
+  </script> -->
+  
+</html>
